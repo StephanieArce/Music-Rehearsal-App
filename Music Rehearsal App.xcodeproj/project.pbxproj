@@ -341,6 +341,7 @@
 				INFOPLIST_FILE = "Music Rehearsal App/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -351,6 +352,7 @@
 				INFOPLIST_FILE = "Music Rehearsal App/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
@@ -407,6 +409,7 @@
 				34D381AB1A14243A007FB8CC /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		34D381AC1A14243A007FB8CC /* Build configuration list for PBXNativeTarget "Music Rehearsal AppTests" */ = {
 			isa = XCConfigurationList;
@@ -415,6 +418,7 @@
 				34D381AE1A14243A007FB8CC /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
