@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		346A65081A16762900D4647C /* SavedSoundSectionsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 346A65071A16762900D4647C /* SavedSoundSectionsTableViewController.swift */; };
 		34D381901A14243A007FB8CC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34D3818F1A14243A007FB8CC /* AppDelegate.swift */; };
 		34D381921A14243A007FB8CC /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34D381911A14243A007FB8CC /* ViewController.swift */; };
 		34D381951A14243A007FB8CC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 34D381931A14243A007FB8CC /* Main.storyboard */; };
@@ -26,6 +27,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		346A65071A16762900D4647C /* SavedSoundSectionsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SavedSoundSectionsTableViewController.swift; sourceTree = "<group>"; };
 		34D3818A1A14243A007FB8CC /* Music Rehearsal App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Music Rehearsal App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		34D3818E1A14243A007FB8CC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		34D3818F1A14243A007FB8CC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -79,6 +81,7 @@
 			children = (
 				34D3818F1A14243A007FB8CC /* AppDelegate.swift */,
 				34D381911A14243A007FB8CC /* ViewController.swift */,
+				346A65071A16762900D4647C /* SavedSoundSectionsTableViewController.swift */,
 				34D381931A14243A007FB8CC /* Main.storyboard */,
 				34D381961A14243A007FB8CC /* Images.xcassets */,
 				34D381981A14243A007FB8CC /* LaunchScreen.xib */,
@@ -214,6 +217,7 @@
 			files = (
 				34D381921A14243A007FB8CC /* ViewController.swift in Sources */,
 				34D381901A14243A007FB8CC /* AppDelegate.swift in Sources */,
+				346A65081A16762900D4647C /* SavedSoundSectionsTableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

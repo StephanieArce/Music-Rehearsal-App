@@ -17,6 +17,8 @@ class ViewController: UIViewController {
     //Variables accessed to all functions
     var timer = NSTimer()
     var timeElapsed = 1.000
+    var userSongClipInfoArray = [String]()
+    var soundClipDurationArray = [FloatLiteralType]()
     
         override func viewDidLoad() {
         super.viewDidLoad()
@@ -48,6 +50,7 @@ class ViewController: UIViewController {
         // This will keep track of the seconds passing by
         var elapsed = -(self.timer.userInfo as NSDate).timeIntervalSinceNow
         timeElapsed = elapsed
+
     }
     
     @IBAction func didPushStopButton(sender: AnyObject) {
@@ -58,6 +61,18 @@ class ViewController: UIViewController {
         stopButton.hidden = true
         
         println("\(timeElapsed)")
+        
+    }
+    
+    //Passes desires Sound Clip Info to the next UI window
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        
+        var savedSongSectionDuration = timeElapsed
+        soundClipDurationArray.append(savedSongSectionDuration)
+        
+        let nextViewController = segue.destinationViewController as
+        SavedSoundSectionsTableViewController
+        nextViewController.userSongClipTimeArray = soundClipDurationArray
         
     }
     

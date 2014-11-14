@@ -35,8 +35,22 @@
                                 </state>
                                 <connections>
                                     <action selector="didPushStopButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="xys-VL-uiG"/>
-                                    <segue destination="PwX-ow-VfZ" kind="push" id="Qzp-TS-arf"/>
+                                    <segue destination="1vL-q1-sj1" kind="push" id="unc-B4-GJz"/>
                                 </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="Uti-hU-rWJ">
+                                <rect key="frame" x="68" y="269" width="30" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Play">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="j4a-mt-CSY">
+                                <rect key="frame" x="209" y="269" width="43" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Pause">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
@@ -67,32 +81,32 @@
             </objects>
             <point key="canvasLocation" x="-3782.9333333333334" y="494.15999999999997"/>
         </scene>
-        <!--Table View Controller-->
-        <scene sceneID="nG9-48-Qxl">
+        <!--Saved Song Sections-->
+        <scene sceneID="y0j-nQ-OMr">
             <objects>
-                <tableViewController id="PwX-ow-VfZ" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="TmT-oI-bpL">
+                <tableViewController id="1vL-q1-sj1" customClass="SavedSoundSectionsTableViewController" customModule="Music_Rehearsal_App" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="Smf-Ex-ekg">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="yth-2j-h7V">
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="songSectionCell" id="Toi-Vo-lN4">
                                 <autoresizingMask key="autoresizingMask"/>
-                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="yth-2j-h7V" id="TNi-aM-6Nu">
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Toi-Vo-lN4" id="hbj-6D-sN9">
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
                             </tableViewCell>
                         </prototypes>
                         <connections>
-                            <outlet property="dataSource" destination="PwX-ow-VfZ" id="5xy-xN-8mY"/>
-                            <outlet property="delegate" destination="PwX-ow-VfZ" id="UD9-p7-2fF"/>
+                            <outlet property="dataSource" destination="1vL-q1-sj1" id="aPm-yw-bCj"/>
+                            <outlet property="delegate" destination="1vL-q1-sj1" id="1up-hL-iTP"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" id="6wR-XZ-CK1"/>
+                    <navigationItem key="navigationItem" title="Saved Song Sections" id="e0q-iI-25X"/>
                 </tableViewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="kzF-dc-diq" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Mo2-Lr-4cY" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-2982" y="494"/>
+            <point key="canvasLocation" x="-2936" y="494"/>
         </scene>
     </scenes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
