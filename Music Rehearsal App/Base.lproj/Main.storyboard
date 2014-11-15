@@ -44,6 +44,9 @@
                                 <state key="normal" title="Play">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="didPushPlayButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="DEL-uV-ghT"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="j4a-mt-CSY">
                                 <rect key="frame" x="209" y="269" width="43" height="30"/>
@@ -57,6 +60,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="6k7-BC-qD5"/>
                     <connections>
+                        <outlet property="playButton" destination="Uti-hU-rWJ" id="qDx-AK-czd"/>
                         <outlet property="startButton" destination="GmQ-8r-gDY" id="leq-Jf-vVe"/>
                         <outlet property="stopButton" destination="Hg9-6y-dwX" id="brJ-gO-YTF"/>
                     </connections>

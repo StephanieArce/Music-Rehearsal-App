@@ -48,7 +48,7 @@ class SavedSoundSectionsTableViewController: UITableViewController {
         if userSongClipTimeArray[indexPath.row] < 60{
             cell.textLabel.text = String(format: "%.0f", userSongClipTimeArray[indexPath.row])
         }else{
-            cell.textLabel.text = String(format: "%.0f:%02f", userSongClipTimeArray[indexPath.row] / 60 , userSongClipTimeArray[indexPath.row] % 60)
+            cell.textLabel.text = String(format: "%.0f:%.0f", userSongClipTimeArray[indexPath.row] / 60 , userSongClipTimeArray[indexPath.row] % 60)
         }
 
         return cell

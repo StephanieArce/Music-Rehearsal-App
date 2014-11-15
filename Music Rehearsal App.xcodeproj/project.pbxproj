@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		346A65081A16762900D4647C /* SavedSoundSectionsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 346A65071A16762900D4647C /* SavedSoundSectionsTableViewController.swift */; };
+		346A650A1A17C5B400D4647C /* Flume &amp.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 346A65091A17C5B400D4647C /* Flume &amp.mp3 */; };
 		34D381901A14243A007FB8CC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34D3818F1A14243A007FB8CC /* AppDelegate.swift */; };
 		34D381921A14243A007FB8CC /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34D381911A14243A007FB8CC /* ViewController.swift */; };
 		34D381951A14243A007FB8CC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 34D381931A14243A007FB8CC /* Main.storyboard */; };
@@ -28,6 +29,7 @@
 
 /* Begin PBXFileReference section */
 		346A65071A16762900D4647C /* SavedSoundSectionsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SavedSoundSectionsTableViewController.swift; sourceTree = "<group>"; };
+		346A65091A17C5B400D4647C /* Flume &amp.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = "Flume &amp.mp3"; path = "../../../Downloads/Flume &amp.mp3"; sourceTree = "<group>"; };
 		34D3818A1A14243A007FB8CC /* Music Rehearsal App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Music Rehearsal App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		34D3818E1A14243A007FB8CC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		34D3818F1A14243A007FB8CC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -93,6 +95,7 @@
 		34D3818D1A14243A007FB8CC /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				346A65091A17C5B400D4647C /* Flume &amp.mp3 */,
 				34D3818E1A14243A007FB8CC /* Info.plist */,
 			);
 			name = "Supporting Files";
@@ -196,6 +199,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				34D381951A14243A007FB8CC /* Main.storyboard in Resources */,
+				346A650A1A17C5B400D4647C /* Flume &amp.mp3 in Resources */,
 				34D3819A1A14243A007FB8CC /* LaunchScreen.xib in Resources */,
 				34D381971A14243A007FB8CC /* Images.xcassets in Resources */,
 			);

@@ -7,20 +7,26 @@
 //
 
 import UIKit
+import AVFoundation
 
 class ViewController: UIViewController {
 
     // Button Controls
     @IBOutlet weak var startButton: UIButton!
     @IBOutlet weak var stopButton: UIButton!
+    @IBOutlet weak var playButton: UIButton!
     
-    //Variables accessed to all functions
+    //Variables to calculate the duration of the mSong Clip and the Song Clip Info
     var timer = NSTimer()
     var timeElapsed = 1.000
     var userSongClipInfoArray = [String]()
     var soundClipDurationArray = [FloatLiteralType]()
     
-        override func viewDidLoad() {
+    //Variables for Audio Player
+    var audioPlayer: AVAudioPlayer?
+    
+    
+    override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
             
@@ -34,6 +40,20 @@ class ViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
 
+    // Playing Audio when the Play button is pushed
+    @IBAction func didPushPlayButton(sender: AnyObject) {
+        if let path = NSBundle.mainBundle().pathForResource("Flume &amp", ofType: "mp3"){
+            audioPlayer = AVAudioPlayer(contentsOfURL: NSURL(fileURLWithPath: path), fileTypeHint: "mp3", error: nil)
+            
+            if let sound = audioPlayer {
+                sound.prepareToPlay()
+                sound.play()
+                println("Sound Played! :D")
+            }
+        }
+        
+    }
+    
    
     @IBAction func didPushStartButton(sender: AnyObject) {
         
@@ -44,6 +64,7 @@ class ViewController: UIViewController {
         startButton.hidden = true
         stopButton.hidden = false
     }
+    
   
     func timeTracker() {
         
@@ -52,6 +73,7 @@ class ViewController: UIViewController {
         timeElapsed = elapsed
 
     }
+    
     
     @IBAction func didPushStopButton(sender: AnyObject) {
         
@@ -64,7 +86,8 @@ class ViewController: UIViewController {
         
     }
     
-    //Passes desires Sound Clip Info to the next UI window
+    
+    //Passes desires Sound Clip Name and Duration to the next UI window
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         
         var savedSongSectionDuration = timeElapsed
