@@ -7,12 +7,37 @@
 //
 
 import UIKit
+import AVFoundation
 
 class SavedSoundSectionsTableViewController: UITableViewController {
     
     var userSongClipNameArray = [String]()
     var userSongClipTimeArray = [FloatLiteralType]()
+  //  @IBOutlet weak var soundName: UILabel!
+  //  @IBOutlet weak var soundTime: UILabel!
+    
+    
+    var song = AVAudioPlayer()
+    var startPosition = NSTimeInterval()
+    var endPosition = NSTimeInterval()
+    
+    // var now = NSTimeInterval()
+    // now = song.deviceCurrentTime
+    
+    
+    @IBAction func play(sender: AnyObject) {
+       // play(startPosition)
+       // [song playAtTime: startPosition]
+        song.currentTime = startPosition
+        song.play()
 
+        while (song.currentTime != endPosition){
+            song.play()
+
+        }
+        
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -46,9 +71,11 @@ class SavedSoundSectionsTableViewController: UITableViewController {
         // Configure the cell. This part willl let you cutomize what goes in here.
         
         if userSongClipTimeArray[indexPath.row] < 60{
-            cell.textLabel.text = String(format: "%.0f", userSongClipTimeArray[indexPath.row])
+         //   soundTime.text = String(format: "00:%.0f", userSongClipTimeArray[indexPath.row])
+         //   soundName.text = userSongClipNameArray[indexPath.row]
         }else{
-            cell.textLabel.text = String(format: "%.0f:%.0f", userSongClipTimeArray[indexPath.row] / 60 , userSongClipTimeArray[indexPath.row] % 60)
+         //   soundTime.text = String(format: "%.0f:%.0f", userSongClipTimeArray[indexPath.row] / 60 , userSongClipTimeArray[indexPath.row] % 60)
+         //   soundName.text = userSongClipNameArray[indexPath.row]
         }
 
         return cell

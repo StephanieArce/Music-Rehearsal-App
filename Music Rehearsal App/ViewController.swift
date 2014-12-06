@@ -139,6 +139,10 @@ class ViewController: UIViewController {
         SavedSoundSectionsTableViewController
         nextViewController.userSongClipTimeArray = soundClipDurationArray
         nextViewController.userSongClipNameArray = userSongClipInfoArray
+        nextViewController.startPosition = startPosition
+        nextViewController.endPosition = endPosition
+        nextViewController.song = audioPlayer
+        
     }
     
 }
