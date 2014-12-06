@@ -35,7 +35,6 @@
                                 </state>
                                 <connections>
                                     <action selector="didPushStopButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="xys-VL-uiG"/>
-                                    <segue destination="1vL-q1-sj1" kind="push" id="unc-B4-GJz"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="Uti-hU-rWJ">
@@ -72,6 +71,47 @@
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <view hidden="YES" contentMode="scaleToFill" id="7MV-pa-b4Q">
+                                <rect key="frame" x="16" y="203" width="288" height="157"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Enter Name:" lineBreakMode="wordWrap" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="zb8-Vi-9WJ">
+                                        <rect key="frame" x="16" y="0.0" width="272" height="62"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
+                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="p4H-Te-O24">
+                                        <rect key="frame" x="147" y="119" width="125" height="30"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <state key="normal" title="Save">
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="didPushSaveButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="f40-HH-2ko"/>
+                                            <segue destination="1vL-q1-sj1" kind="push" id="Ywq-ox-o1r"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="ghW-Cv-j9U">
+                                        <rect key="frame" x="14" y="119" width="125" height="30"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <state key="normal" title="Cancel">
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="didPushCancelButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="3ft-JI-QAe"/>
+                                        </connections>
+                                    </button>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter Sound Clip Name" minimumFontSize="17" id="TBA-iO-LXW">
+                                        <rect key="frame" x="8" y="64" width="272" height="30"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                </subviews>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
@@ -80,6 +120,8 @@
                         <outlet property="musicProgressBar" destination="uSG-BS-yG3" id="2cd-dq-hbe"/>
                         <outlet property="musicTimeTextLabel" destination="GS5-OD-OXA" id="NQa-cb-80I"/>
                         <outlet property="playButton" destination="Uti-hU-rWJ" id="qDx-AK-czd"/>
+                        <outlet property="saveAudioFileName" destination="7MV-pa-b4Q" id="Tuw-Tz-ihf"/>
+                        <outlet property="soundClipName" destination="TBA-iO-LXW" id="PJP-ZR-XUs"/>
                         <outlet property="startButton" destination="GmQ-8r-gDY" id="leq-Jf-vVe"/>
                         <outlet property="stopButton" destination="Hg9-6y-dwX" id="brJ-gO-YTF"/>
                     </connections>

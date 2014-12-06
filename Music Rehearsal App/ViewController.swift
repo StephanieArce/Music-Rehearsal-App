@@ -9,6 +9,7 @@
 import UIKit
 import AVFoundation
 import Foundation
+import MediaPlayer
 
 class ViewController: UIViewController {
 
@@ -18,12 +19,15 @@ class ViewController: UIViewController {
     @IBOutlet weak var playButton: UIButton!
     @IBOutlet weak var musicProgressBar: UIProgressView!
     @IBOutlet weak var musicTimeTextLabel: UILabel!
+    @IBOutlet weak var saveAudioFileName: UIView!
+    @IBOutlet weak var soundClipName: UITextField!
     
     //Variables to calculate the duration of the mSong Clip and the Song Clip Info
-    var timer = NSTimer()
     var timeElapsed = 1.000
     var userSongClipInfoArray = [String]()
     var soundClipDurationArray = [FloatLiteralType]()
+    var startPosition = 1.0000
+    var endPosition = 1.000
     
     //Variables for Audio Player
     var audioPlayer: AVAudioPlayer!
@@ -43,6 +47,11 @@ class ViewController: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+    
+    
+    
+    
+    
     
     // Audio Player progress bar and controls of pausing and playing the song.
     func readFileIntoAudioPLayer(){
@@ -78,28 +87,47 @@ class ViewController: UIViewController {
         }
     }
     
+    
+    
+    
+    
+    
    
     // Timer for the time elapsed when the person starts and stops the section of the song that
     // they want to save and modify later.
     @IBAction func didPushStartButton(sender: AnyObject) {
-        //NSTimer will update every 1 second
-        timer = NSTimer.scheduledTimerWithTimeInterval(1.0, target: self, selector: "timeTracker", userInfo: NSDate(), repeats: true)
-        
-        //Let's the start button appear
+        // When the start button is pushed then their we  identify the position in the audio
+        //clip and save the audio from there.
+        startPosition = audioPlayer.currentTime
+        println("\(startPosition)")
         startButton.hidden = true
-        stopButton.hidden = false
-    }
-    func timeTracker() {
-        // This will keep track of the seconds passing by
-        var elapsed = -(self.timer.userInfo as NSDate).timeIntervalSinceNow
-        timeElapsed = elapsed
+        stopButton.hidden = false  //Let's the start button appear
     }
     @IBAction func didPushStopButton(sender: AnyObject) {
-        timer.invalidate() // Stops the timer from repeating
+        endPosition = audioPlayer.currentTime
+        audioPlayer.pause()
+        println("\(endPosition)")
+        timeElapsed = endPosition - startPosition
+        println("\(timeElapsed)")
+        
+        // This will be the next part in which the start button now has a pop up window that will
+        // appear when the user want's to save the file.
+        saveAudioFileName.hidden = false
+    }
+    
+    @IBAction func didPushCancelButton(sender: AnyObject) {
+        saveAudioFileName.hidden = true
         startButton.hidden = false
         stopButton.hidden = true
-        println("\(timeElapsed)")
     }
+    @IBAction func didPushSaveButton(sender: AnyObject) {
+        saveAudioFileName.hidden = true
+        userSongClipInfoArray.append(soundClipName.text)
+        startButton.hidden = false
+        stopButton.hidden = true
+    }
+    
+    
     
     
     //Passes desires Sound Clip Name and Duration to the next UI window
@@ -110,6 +138,7 @@ class ViewController: UIViewController {
         let nextViewController = segue.destinationViewController as
         SavedSoundSectionsTableViewController
         nextViewController.userSongClipTimeArray = soundClipDurationArray
+        nextViewController.userSongClipNameArray = userSongClipInfoArray
     }
     
 }
